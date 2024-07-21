@@ -1,5 +1,12 @@
-const Homepage = () => {
-  return <div>Hello World</div>;
-};
+import StartPage from "@/components/startpage";
 
-export default Homepage;
+
+const HomePage = () => (
+  <div className="overflow-hidden">
+    <StartPage />
+  </div>
+);
+
+export default HomePage;
+
+
