@@ -1,12 +1,15 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
 
 const UnderConstructionPage = ({ children, backTo = "/" }) => {
-  const size = {
-    fontSize: `${Math.min(window.innerWidth, window.innerHeight) * 0.05}px`,
-  };
+  const [size, setSize] = useState({});
+  useEffect(() => {
+    setSize({
+      fontSize: `${Math.min(window.innerWidth, window.innerHeight) * 0.05}px`,
+    });
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
@@ -28,5 +31,6 @@ const UnderConstructionPage = ({ children, backTo = "/" }) => {
 };
 
 export default UnderConstructionPage;
+
 
 
